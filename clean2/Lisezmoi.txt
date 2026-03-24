@@ -1,0 +1,74 @@
+============================================
+Cleaner GUI — Nettoyage complet FR
+============================================
+
+Auteur      : ps81frt
+GitHub      : https://github.com/ps81frt
+Version     : 1.0
+Date        : 2026
+
+Description :
+-------------
+Cleaner GUI est un utilitaire PowerShell avec interface graphique
+pour nettoyer Windows en profondeur, avec options avancées et log détaillé.
+
+Fonctionnalités :
+-----------------
+1. Nettoyage fichiers temporaires :
+   - Utilisateur       : %TEMP%\*
+   - Système           : C:\Windows\Temp\*
+   - Prefetch          : C:\Windows\Prefetch\*
+   - Documents récents : %APPDATA%\Microsoft\Windows\Recent\*
+   - Logs Windows      : C:\Windows\*.log
+
+2. Nettoyage avancé :
+   - UserAssist registry (HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist)
+   - BAM registry (HKLM\SYSTEM\CurrentControlSet\Services\bam\State\UserSettings)
+   - DAM registry (HKLM\SYSTEM\CurrentControlSet\Services\dam\State\UserSettings)
+   - Cache icônes et miniatures (Explorer iconcache & thumbcache)
+
+3. Vidage journaux d’événements (optionnel) :
+   - Application
+   - System
+
+4. Nettoyage caches système :
+   - Windows Error Reporting (WER)
+   - DirectX Shader Cache
+   - Cache Windows Update (SoftwareDistribution)
+   - Cache Windows Store (wsreset)
+   - Cache IE / Edge Legacy
+
+5. Nettoyage réseau :
+   - Vidage cache DNS (ipconfig /flushdns)
+
+6. Corbeille :
+   - Vidage complet de la corbeille utilisateur
+
+7. Lancement CleanMgr intégré (sagerun:1)
+
+Interface GUI :
+---------------
+- Log détaillé en temps réel
+- Barre de progression
+- Checkboxes pour activer/désactiver certaines options
+- Boutons : Demarrer le nettoyage / Quitter
+
+Instructions :
+--------------
+1. Lancer Cleaner.ps1 avec droits administrateur.
+2. Sélectionner les options souhaitées.
+3. Cliquer sur "Demarrer le nettoyage".
+4. Suivre la progression et les messages dans le log.
+5. Message final : "NETTOYAGE TERMINE !" apparait à la fin.
+
+Désinstallation :
+-----------------
+- Supprime tous les fichiers copiés, raccourcis et entrées registre créés.
+
+Remarques :
+-----------
+- L’Explorateur Windows sera arrêté et relancé automatiquement si l’option UserAssist / BAM / DAM est activée.
+- Les services wuauserv et bits sont temporairement arrêtés lors du nettoyage Windows Update et relancés automatiquement.
+- Le script est conçu pour être sûr mais nécessite des droits administrateur.
+
+Merci d’utiliser Cleaner GUI pour un nettoyage complet et sécurisé de Windows !
