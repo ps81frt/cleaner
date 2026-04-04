@@ -3,7 +3,7 @@
 ## Description
 
 **Cleaner** est un utilitaire de nettoyage industriel pour Windows, développé en PowerShell avec une interface graphique WPF asynchrone. Conçu pour les ingénieurs système, il optimise les performances en ciblant les résidus profonds du système d'exploitation.
-![cleaner-main](./clean2/cleaner.gif)
+![cleaner-main](./clean2/cleaner.png)
 
 ## Caractéristiques Techniques
 
